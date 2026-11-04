@@ -1,0 +1,340 @@
+// Plano de treino (fonte: meu_treino_completo.pdf)
+
+const EXERCICIOS = {
+  extensora: {
+    nome: "Cadeira extensora",
+    img: "img/extensora.webp",
+    musculos: "Quadríceps",
+    passos: [
+      "Ajuste o encosto para que o joelho fique alinhado ao eixo da máquina e o rolo sobre a canela, logo acima do tornozelo.",
+      "Estenda os joelhos de forma controlada até quase esticar as pernas.",
+      "Desça devagar, sem deixar o peso bater no fim do movimento."
+    ],
+    dica: "segure nas alças e mantenha o quadril firme no banco."
+  },
+  leg_press: {
+    nome: "Leg press 45°",
+    img: "img/leg_press.webp",
+    musculos: "Quadríceps, glúteos e posteriores",
+    passos: [
+      "Sente-se no leg press e posicione os pés na plataforma na largura dos ombros.",
+      "Desça o peso de forma controlada, sem tirar o quadril do encosto.",
+      "Empurre a plataforma de volta, sem travar os joelhos."
+    ],
+    dica: "mantenha a lombar bem apoiada e o core contraído durante todo o movimento."
+  },
+  hack: {
+    nome: "Hack squat",
+    img: "img/hack.webp",
+    musculos: "Quadríceps e glúteos",
+    passos: [
+      "Apoie as costas e os ombros no encosto, com os pés na plataforma na largura do quadril.",
+      "Destrave a máquina e desça flexionando os joelhos de forma controlada.",
+      "Suba empurrando a plataforma com o pé inteiro, sem travar os joelhos."
+    ],
+    dica: "os joelhos acompanham a direção da ponta dos pés."
+  },
+  abdutora: {
+    nome: "Abdutora",
+    img: "img/abdutora.webp",
+    musculos: "Glúteo médio e glúteo mínimo",
+    passos: [
+      "Sente-se com as costas apoiadas e a parte externa dos joelhos contra as almofadas.",
+      "Afaste as pernas de forma controlada até o máximo confortável.",
+      "Volte devagar, sem deixar as placas de peso baterem."
+    ],
+    dica: "segure 1 segundo na abertura máxima para sentir mais o glúteo."
+  },
+  leg_unilateral: {
+    nome: "Leg press horizontal unilateral",
+    img: "img/leg_unilateral.webp",
+    musculos: "Quadríceps e glúteos",
+    passos: [
+      "Sente-se com as costas apoiadas e coloque um pé no centro da plataforma.",
+      "Flexione o joelho trazendo a plataforma de forma controlada.",
+      "Empurre de volta sem travar o joelho. Complete as repetições e troque de perna."
+    ],
+    dica: "comece pela perna mais fraca e faça o mesmo número de repetições na outra."
+  },
+  puxada: {
+    nome: "Puxada alta aberta",
+    img: "img/puxada.webp",
+    musculos: "Dorsais, bíceps e parte posterior dos ombros",
+    passos: [
+      "Ajuste o apoio das coxas e segure a barra com as mãos mais afastadas que os ombros.",
+      "Puxe a barra em direção à parte de cima do peito, levando os cotovelos para baixo.",
+      "Volte de forma controlada até estender os braços."
+    ],
+    dica: "peito aberto e ombros longe das orelhas; evite jogar o tronco para trás."
+  },
+  remada: {
+    nome: "Remada baixa unilateral",
+    img: "img/remada.webp",
+    musculos: "Dorsais, meio das costas e bíceps",
+    passos: [
+      "Sente-se com o tronco ereto e segure a pegada com uma das mãos.",
+      "Puxe levando o cotovelo para trás, próximo ao corpo.",
+      "Volte devagar estendendo o braço. Complete as repetições e troque de lado."
+    ],
+    dica: "evite girar o tronco; quem faz o movimento são as costas."
+  },
+  supino: {
+    nome: "Chest press / supino máquina",
+    img: "img/supino.webp",
+    musculos: "Peitoral, tríceps e parte da frente dos ombros",
+    passos: [
+      "Ajuste o banco para que as pegadas fiquem na altura do meio do peito.",
+      "Empurre as pegadas para a frente até quase estender os braços.",
+      "Volte de forma controlada, sentindo o peito alongar."
+    ],
+    dica: "mantenha as costas apoiadas e os ombros encaixados para trás."
+  },
+  desenvolvimento: {
+    nome: "Desenvolvimento de ombros",
+    img: "img/desenvolvimento.webp",
+    musculos: "Ombros e tríceps",
+    passos: [
+      "Sente-se com as costas apoiadas e as pegadas na altura dos ombros.",
+      "Empurre para cima até quase estender os braços.",
+      "Desça devagar até a altura dos ombros."
+    ],
+    dica: "não arqueie a lombar; mantenha o abdômen contraído."
+  },
+  rosca_martelo: {
+    nome: "Rosca martelo",
+    img: "img/rosca_martelo.webp",
+    musculos: "Bíceps e antebraços",
+    passos: [
+      "Em pé, segure os halteres com as palmas voltadas uma para a outra.",
+      "Flexione os cotovelos levando os halteres em direção aos ombros.",
+      "Desça de forma controlada até estender os braços."
+    ],
+    dica: "cotovelos fixos ao lado do corpo, sem balançar o tronco."
+  },
+  triceps_polia: {
+    nome: "Tríceps na polia com corda",
+    img: "img/triceps_polia.webp",
+    musculos: "Tríceps",
+    passos: [
+      "De frente para a polia alta, segure a corda com os cotovelos junto ao corpo.",
+      "Estenda os cotovelos empurrando a corda para baixo e abrindo as pontas no final.",
+      "Volte devagar até os antebraços ficarem um pouco acima da linha paralela ao chão."
+    ],
+    dica: "só os antebraços se movem; os cotovelos ficam parados."
+  },
+  flexora_sentada: {
+    nome: "Flexora sentada",
+    img: "img/flexora_sentada.webp",
+    musculos: "Posteriores de coxa",
+    passos: [
+      "Ajuste a máquina para o joelho ficar alinhado ao eixo e o rolo atrás do tornozelo.",
+      "Flexione os joelhos puxando o rolo para baixo e para trás.",
+      "Volte de forma controlada até quase estender as pernas."
+    ],
+    dica: "trave bem as coxas com o apoio e não tire o quadril do banco."
+  },
+  stiff: {
+    nome: "Stiff / levantamento romeno",
+    img: "img/stiff.webp",
+    musculos: "Posteriores de coxa, glúteos e lombar",
+    passos: [
+      "Em pé, segure a barra ou os halteres à frente das coxas, com os joelhos levemente flexionados.",
+      "Leve o quadril para trás descendo o peso rente às pernas, com as costas retas.",
+      "Suba contraindo os glúteos até ficar ereta novamente."
+    ],
+    dica: "desça só até onde conseguir manter a coluna neutra."
+  },
+  bulgaro: {
+    nome: "Agachamento búlgaro com apoio",
+    img: "img/bulgaro.webp",
+    musculos: "Quadríceps e glúteos",
+    passos: [
+      "Apoie o peito de um pé no banco atrás de você e segure em um apoio para se equilibrar.",
+      "Desça flexionando o joelho da frente até a coxa ficar perto da linha paralela ao chão.",
+      "Suba empurrando o chão com o pé da frente. Complete as repetições e troque de lado."
+    ],
+    dica: "tronco levemente inclinado à frente ativa mais o glúteo."
+  },
+  sumo_kb: {
+    nome: "Agachamento sumô com kettlebell",
+    img: "img/sumo_kb.webp",
+    musculos: "Glúteos, adutores e quadríceps",
+    passos: [
+      "Afaste os pés além da largura dos ombros, com as pontas para fora, segurando o kettlebell à frente.",
+      "Agache levando o quadril para baixo, com o tronco ereto.",
+      "Suba empurrando o chão e contraindo os glúteos no topo."
+    ],
+    dica: "empurre os joelhos para fora, na direção das pontas dos pés."
+  },
+  lateral_polia: {
+    nome: "Elevação lateral na polia",
+    img: "img/lateral_polia.webp",
+    musculos: "Ombros (deltoide lateral)",
+    passos: [
+      "De lado para a polia baixa, segure a pegada com a mão mais distante dela.",
+      "Eleve o braço para o lado até a altura do ombro, com o cotovelo levemente flexionado.",
+      "Desça devagar. Complete as repetições e troque de lado."
+    ],
+    dica: "leve o cotovelo para cima, não a mão, e não suba os ombros."
+  },
+  supino_declinado: {
+    nome: "Supino declinado na máquina",
+    img: "img/supino_declinado.webp",
+    musculos: "Peitoral (parte inferior) e tríceps",
+    passos: [
+      "Ajuste o banco e segure as pegadas na linha da parte de baixo do peito.",
+      "Empurre para a frente e para baixo até quase estender os braços.",
+      "Volte de forma controlada."
+    ],
+    dica: "mantenha as escápulas encaixadas e as costas apoiadas."
+  },
+  remada_alta: {
+    nome: "Remada alta",
+    img: "img/remada_alta.webp",
+    musculos: "Ombros e trapézio",
+    passos: [
+      "Em pé, segure a barra ou a pegada da polia à frente das coxas.",
+      "Puxe para cima, rente ao corpo, levando os cotovelos para o lado até perto da altura dos ombros.",
+      "Desça devagar até estender os braços."
+    ],
+    dica: "não suba além da altura dos ombros para proteger a articulação."
+  },
+  triceps_maquina: {
+    nome: "Tríceps máquina",
+    img: "img/triceps_maquina.webp",
+    musculos: "Tríceps",
+    passos: [
+      "Ajuste o banco para os cotovelos ficarem apoiados e alinhados ao eixo da máquina.",
+      "Estenda os cotovelos empurrando as pegadas.",
+      "Volte de forma controlada."
+    ],
+    dica: "mantenha as costas apoiadas e os ombros relaxados."
+  },
+  rosca_polia: {
+    nome: "Rosca bíceps na polia",
+    img: "img/rosca_polia.webp",
+    musculos: "Bíceps",
+    passos: [
+      "De frente para a polia baixa, segure a barra com as palmas para cima.",
+      "Flexione os cotovelos levando a barra em direção aos ombros.",
+      "Desça devagar até estender os braços."
+    ],
+    dica: "cotovelos colados ao corpo, sem balançar o tronco."
+  },
+  pulldown_corda: {
+    nome: "Pulldown com corda",
+    img: "img/pulldown_corda.webp",
+    musculos: "Dorsais",
+    passos: [
+      "De frente para a polia alta, segure a corda com os braços estendidos e o tronco levemente inclinado.",
+      "Puxe a corda em direção às coxas mantendo os braços quase retos.",
+      "Volte devagar até sentir as costas alongarem."
+    ],
+    dica: "pense em levar os cotovelos para trás, contraindo as costas."
+  },
+  hip_thrust: {
+    nome: "Hip thrust",
+    img: "img/hip_thrust.webp",
+    musculos: "Glúteos e posteriores",
+    passos: [
+      "Apoie a parte de cima das costas no banco, com a barra ou a pegada sobre o quadril.",
+      "Empurre o quadril para cima até o tronco ficar alinhado com as coxas.",
+      "Desça de forma controlada."
+    ],
+    dica: "queixo levemente para baixo e contração forte do glúteo no topo."
+  },
+  terra_sumo: {
+    nome: "Levantamento terra sumô",
+    img: "img/terra_sumo.webp",
+    musculos: "Glúteos, posteriores, adutores e lombar",
+    passos: [
+      "Afaste os pés além da largura dos ombros, com as pontas para fora, e segure o peso entre as pernas.",
+      "Com as costas retas, suba estendendo joelhos e quadril ao mesmo tempo.",
+      "Desça de forma controlada, levando o quadril para trás."
+    ],
+    dica: "mantenha o peso próximo ao corpo e o abdômen firme."
+  },
+  coice: {
+    nome: "Coice de glúteo na máquina",
+    img: null,
+    musculos: "Glúteo máximo",
+    passos: [
+      "Apoie os antebraços ou o peito na máquina e posicione um pé na plataforma ou no apoio.",
+      "Empurre a perna para trás e para cima, estendendo o quadril.",
+      "Volte devagar. Complete as repetições e troque de lado."
+    ],
+    dica: "evite arquear a lombar; o movimento vem do glúteo."
+  }
+};
+
+const DIAS = [
+  {
+    id: "seg", curto: "Seg", nome: "Segunda", treino: "Inferiores A",
+    foco: "quadríceps e glúteos", tempo: "~ 50–60 min",
+    exercicios: [
+      { id: "extensora", reps: "12–15" },
+      { id: "leg_press", reps: "10–12" },
+      { id: "hack", reps: "10–12" },
+      { id: "abdutora", reps: "12–15" },
+      { id: "leg_unilateral", reps: "10 por lado" }
+    ]
+  },
+  {
+    id: "ter", curto: "Ter", nome: "Terça", treino: "Superiores A",
+    foco: "costas, peito, ombros e braços", tempo: "~ 55–65 min",
+    exercicios: [
+      { id: "puxada", reps: "10–12" },
+      { id: "remada", reps: "10–12 por lado" },
+      { id: "supino", reps: "10–12" },
+      { id: "desenvolvimento", reps: "10–12" },
+      { id: "rosca_martelo", reps: "10–12" },
+      { id: "triceps_polia", reps: "10–12" }
+    ]
+  },
+  {
+    id: "qua", curto: "Qua", nome: "Quarta", treino: "Inferiores B",
+    foco: "posteriores e glúteos", tempo: "~ 50–60 min",
+    exercicios: [
+      { id: "flexora_sentada", reps: "12–15" },
+      { id: "stiff", reps: "8–10" },
+      { id: "bulgaro", reps: "10 por lado" },
+      { id: "sumo_kb", reps: "10–12" },
+      { id: "abdutora", reps: "12–15" }
+    ]
+  },
+  {
+    id: "qui", curto: "Qui", nome: "Quinta", treino: "Superiores B",
+    foco: "ombros, peito, costas e braços", tempo: "~ 60–75 min",
+    exercicios: [
+      { id: "desenvolvimento", reps: "10–12" },
+      { id: "lateral_polia", reps: "12–15" },
+      { id: "supino_declinado", reps: "10–12" },
+      { id: "remada_alta", reps: "10–12" },
+      { id: "triceps_maquina", reps: "10–12" },
+      { id: "rosca_polia", reps: "10–12" },
+      { id: "pulldown_corda", reps: "12–15" }
+    ]
+  },
+  {
+    id: "sex", curto: "Sex", nome: "Sexta", treino: "Inferiores C",
+    foco: "glúteos e quadríceps", tempo: "~ 50–60 min",
+    exercicios: [
+      { id: "hip_thrust", reps: "10–12" },
+      { id: "terra_sumo", reps: "10–12" },
+      { id: "coice", reps: "12–15 por lado" },
+      { id: "abdutora", reps: "12–15" },
+      { id: "extensora", reps: "12–15" }
+    ]
+  }
+];
+
+const SERIES = 3;
+
+const ORIENTACOES = [
+  "Nas primeiras 1–2 semanas após a pausa, escolha cargas moderadas e finalize cada série sentindo que conseguiria fazer cerca de 3 repetições extras, mantendo a técnica.",
+  "Depois, progrida gradualmente: aumente repetições dentro da faixa e/ou a carga quando conseguir completar todas as séries com boa execução.",
+  "Descanso sugerido: 60–120 segundos entre séries; exercícios mais exigentes podem pedir até 2 minutos.",
+  "Faça aquecimento leve e séries de preparação antes dos movimentos principais. O aquecimento não conta como as 3 séries de trabalho.",
+  "Cardio opcional e leve: caminhada de 10–15 minutos algumas vezes na semana, aumentando aos poucos conforme disposição e recuperação.",
+  "Interrompa se houver dor aguda ou desconforto incomum. Para ajustes de técnica e carga, siga as orientações do profissional que acompanha seu treino."
+];
