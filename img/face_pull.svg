@@ -1,0 +1,50 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 250' width='250' height='250'>
+<rect width='250' height='250' fill='#ffffff'/>
+<ellipse cx='125' cy='224' rx='100' ry='7' fill='#000' opacity='.06'/>
+<rect x='206' y='18' width='26' height='205' rx='4' fill='#7b808b' stroke='#2f3238' stroke-width='1.5'/>
+<rect x='211' y='28' width='16' height='185' rx='2' fill='#9aa0aa' stroke='#2f3238' stroke-width='1.5'/>
+<rect x='202' y='214' width='34' height='9' rx='3' fill='#464a53' stroke='#2f3238' stroke-width='1.5'/>
+<circle cx='212' cy='66' r='7' fill='#464a53' stroke='#2f3238' stroke-width='1.5'/>
+<line x1='150' y1='66' x2='206' y2='66' stroke='#4b4f57' stroke-width='2.5' stroke-linecap='round'/>
+<line x1='108' y1='150' x2='104' y2='184' stroke='#b97a5a' stroke-width='22' stroke-linecap='round'/>
+<line x1='108' y1='150' x2='104' y2='184' stroke='#e2a985' stroke-width='19' stroke-linecap='round'/>
+<line x1='104' y1='184' x2='96' y2='214' stroke='#b97a5a' stroke-width='16' stroke-linecap='round'/>
+<line x1='104' y1='184' x2='96' y2='214' stroke='#e2a985' stroke-width='13' stroke-linecap='round'/>
+<line x1='108' y1='150' x2='106.3' y2='164.3' stroke='#111114' stroke-width='24' stroke-linecap='round'/>
+<line x1='108' y1='150' x2='106.3' y2='164.3' stroke='#2a2a30' stroke-width='21' stroke-linecap='round'/>
+<ellipse cx='102' cy='216' rx='12' ry='6.5' fill='#ffffff' stroke='#9aa1ab' stroke-width='1.8' transform='rotate(0 102 216)'/>
+<line x1='112' y1='90' x2='104' y2='70' stroke='#b97a5a' stroke-width='14' stroke-linecap='round'/>
+<line x1='112' y1='90' x2='104' y2='70' stroke='#e2a985' stroke-width='11' stroke-linecap='round'/>
+<line x1='104' y1='70' x2='144' y2='62' stroke='#b97a5a' stroke-width='12.5' stroke-linecap='round'/>
+<line x1='104' y1='70' x2='144' y2='62' stroke='#e2a985' stroke-width='9.5' stroke-linecap='round'/>
+<circle cx='144' cy='62' r='6' fill='#e2a985' stroke='#b97a5a' stroke-width='1.5'/>
+<line x1='112' y1='90' x2='108' y2='150' stroke='#b97a5a' stroke-width='30' stroke-linecap='round'/>
+<line x1='112' y1='90' x2='108' y2='150' stroke='#f2c4a2' stroke-width='27' stroke-linecap='round'/>
+<line x1='112' y1='90' x2='109.8' y2='123' stroke='#b8325c' stroke-width='32' stroke-linecap='round'/>
+<line x1='112' y1='90' x2='109.8' y2='123' stroke='#ee6a92' stroke-width='29' stroke-linecap='round'/>
+<line x1='108.7' y1='139.2' x2='108' y2='150' stroke='#111114' stroke-width='32' stroke-linecap='round'/>
+<line x1='108.7' y1='139.2' x2='108' y2='150' stroke='#2a2a30' stroke-width='29' stroke-linecap='round'/>
+<line x1='108' y1='150' x2='116' y2='184' stroke='#b97a5a' stroke-width='22' stroke-linecap='round'/>
+<line x1='108' y1='150' x2='116' y2='184' stroke='#f2c4a2' stroke-width='19' stroke-linecap='round'/>
+<line x1='116' y1='184' x2='118' y2='216' stroke='#b97a5a' stroke-width='16' stroke-linecap='round'/>
+<line x1='116' y1='184' x2='118' y2='216' stroke='#f2c4a2' stroke-width='13' stroke-linecap='round'/>
+<line x1='108' y1='150' x2='111.4' y2='164.3' stroke='#111114' stroke-width='24' stroke-linecap='round'/>
+<line x1='108' y1='150' x2='111.4' y2='164.3' stroke='#2a2a30' stroke-width='21' stroke-linecap='round'/>
+<ellipse cx='124' cy='218' rx='12' ry='6.5' fill='#ffffff' stroke='#9aa1ab' stroke-width='1.8' transform='rotate(0 124 218)'/>
+<line x1='112' y1='90' x2='117.5' y2='75.7' stroke='#b97a5a' stroke-width='12' stroke-linecap='round'/>
+<line x1='112' y1='90' x2='117.5' y2='75.7' stroke='#f2c4a2' stroke-width='9' stroke-linecap='round'/>
+<path d='M113 52 q-22 2 -20 30 q9 -8 12 -26 z' fill='#6b3a24' stroke='#4a2616' stroke-width='1.5'/>
+<circle cx='109' cy='55' r='3.5' fill='#ee6a92' stroke='#b8325c' stroke-width='1.2'/>
+<circle cx='122' cy='64' r='14.5' fill='#f2c4a2' stroke='#b97a5a' stroke-width='1.8'/>
+<path d='M131 53 A15 15 0 1 0 118 77 Q121 62 131 53 z' fill='#6b3a24' stroke='#4a2616' stroke-width='1.5'/>
+<circle cx='130' cy='63' r='1.6' fill='#3a2a22' stroke='#3a2a22' stroke-width='0'/>
+<line x1='112' y1='90' x2='110' y2='68' stroke='#b97a5a' stroke-width='14' stroke-linecap='round'/>
+<line x1='112' y1='90' x2='110' y2='68' stroke='#f2c4a2' stroke-width='11' stroke-linecap='round'/>
+<line x1='110' y1='68' x2='148' y2='68' stroke='#b97a5a' stroke-width='12.5' stroke-linecap='round'/>
+<line x1='110' y1='68' x2='148' y2='68' stroke='#f2c4a2' stroke-width='9.5' stroke-linecap='round'/>
+<circle cx='148' cy='68' r='6' fill='#f2c4a2' stroke='#b97a5a' stroke-width='1.5'/>
+<line x1='144' y1='62' x2='150' y2='66' stroke='#8a6a3a' stroke-width='7' stroke-linecap='round'/>
+<line x1='144' y1='62' x2='150' y2='66' stroke='#c9a46a' stroke-width='4' stroke-linecap='round'/>
+<line x1='148' y1='68' x2='150' y2='66' stroke='#8a6a3a' stroke-width='7' stroke-linecap='round'/>
+<line x1='148' y1='68' x2='150' y2='66' stroke='#c9a46a' stroke-width='4' stroke-linecap='round'/>
+</svg>

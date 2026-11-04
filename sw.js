@@ -1,12 +1,18 @@
 // Aumente a versão sempre que mudar algum arquivo, para o app atualizar no celular.
-const VERSAO = "meutreino-v1";
+const VERSAO = "meutreino-v2";
 
 const IMGS = [
-  "abdutora", "bulgaro", "desenvolvimento", "extensora", "flexora_sentada", "hack",
-  "hip_thrust", "lateral_polia", "leg_press", "leg_unilateral", "pulldown_corda", "puxada",
-  "remada", "remada_alta", "rosca_martelo", "rosca_polia", "stiff", "sumo_kb", "supino",
-  "supino_declinado", "terra_sumo", "triceps_maquina", "triceps_polia"
-].map((n) => `img/${n}.webp`);
+  ...[
+    "abdutora", "bulgaro", "desenvolvimento", "extensora", "flexora_sentada", "hack",
+    "hip_thrust", "lateral_polia", "leg_press", "leg_unilateral", "pulldown_corda", "puxada",
+    "remada", "remada_alta", "rosca_martelo", "rosca_polia", "stiff", "sumo_kb", "supino",
+    "supino_declinado", "terra_sumo", "triceps_maquina", "triceps_polia"
+  ].map((n) => `img/${n}.webp`),
+  ...[
+    "goblet", "afundo", "remada_halter", "abdominal", "supino_halteres", "desenvolvimento_halteres",
+    "elevacao_lateral", "face_pull", "step_up", "coice_polia"
+  ].map((n) => `img/${n}.svg`)
+];
 
 const ARQUIVOS = [
   "./", "index.html", "styles.css", "app.js", "data.js", "manifest.webmanifest",
@@ -35,7 +41,7 @@ self.addEventListener("fetch", (e) => {
     if (resp.ok) { const copia = resp.clone(); caches.open(VERSAO).then((c) => c.put(req, copia)); }
     return resp;
   };
-  if (/\.(webp|png)$/.test(new URL(req.url).pathname)) {
+  if (/\.(webp|png|svg)$/.test(new URL(req.url).pathname)) {
     e.respondWith(caches.match(req).then((r) => r || fetch(req).then(guardar)));
   } else {
     e.respondWith(fetch(req).then(guardar).catch(() => caches.match(req, { ignoreSearch: true })));
