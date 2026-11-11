@@ -1,5 +1,5 @@
 // Aumente a versão sempre que mudar algum arquivo, para o app atualizar no celular.
-const VERSAO = "meutreino-v2";
+const VERSAO = "meutreino-v3";
 
 const IMGS = [
   ...[
@@ -10,8 +10,8 @@ const IMGS = [
   ].map((n) => `img/${n}.webp`),
   ...[
     "goblet", "afundo", "remada_halter", "abdominal", "supino_halteres", "desenvolvimento_halteres",
-    "elevacao_lateral", "face_pull", "step_up", "coice_polia"
-  ].map((n) => `img/${n}.svg`)
+    "elevacao_lateral", "face_pull", "step_up", "coice_polia", "leg_horizontal", "leg_horizontal_unilateral"
+  ].map((n) => `img/${n}.jpg`)
 ];
 
 const ARQUIVOS = [
@@ -41,7 +41,7 @@ self.addEventListener("fetch", (e) => {
     if (resp.ok) { const copia = resp.clone(); caches.open(VERSAO).then((c) => c.put(req, copia)); }
     return resp;
   };
-  if (/\.(webp|png|svg)$/.test(new URL(req.url).pathname)) {
+  if (/\.(webp|png|svg|jpe?g)$/.test(new URL(req.url).pathname)) {
     e.respondWith(caches.match(req).then((r) => r || fetch(req).then(guardar)));
   } else {
     e.respondWith(fetch(req).then(guardar).catch(() => caches.match(req, { ignoreSearch: true })));

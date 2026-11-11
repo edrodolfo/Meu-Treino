@@ -213,7 +213,7 @@
         <button class="icone fav ${fav ? "on" : ""}" aria-label="Favoritar" aria-pressed="${fav}">${I.heart}</button>
       </header>
       <main class="conteudo">
-        <div class="hero">
+        <div class="hero ${/\.jpe?g$/.test(ex.img || "") ? "largo" : ""}">
           ${thumb(ex, "hero-img")}
           <div class="musculos"><b>Principais músculos</b>${esc(ex.musculos)}</div>
         </div>

@@ -47,7 +47,7 @@ const EXERCICIOS = {
   },
   leg_unilateral: {
     nome: "Leg press horizontal unilateral",
-    img: "img/leg_unilateral.webp",
+    img: "img/leg_horizontal_unilateral.jpg",
     musculos: "Quadríceps e glúteos",
     passos: [
       "Sente-se com as costas apoiadas e coloque um pé no centro da plataforma.",
@@ -256,7 +256,7 @@ const EXERCICIOS = {
   },
   coice: {
     nome: "Coice de glúteo na máquina",
-    img: "img/coice_polia.svg",
+    img: "img/coice_polia.jpg",
     musculos: "Glúteo máximo",
     passos: [
       "Apoie os antebraços ou o peito na máquina e posicione um pé na plataforma ou no apoio.",
@@ -269,7 +269,7 @@ const EXERCICIOS = {
   // ---------- Exercícios do treino 2 ----------
   goblet: {
     nome: "Agachamento goblet com halter",
-    img: "img/goblet.svg",
+    img: "img/goblet.jpg",
     musculos: "Quadríceps, glúteos e core",
     passos: [
       "Segure um halter na vertical junto ao peito, com os pés um pouco além da largura do quadril.",
@@ -280,7 +280,7 @@ const EXERCICIOS = {
   },
   leg_horizontal: {
     nome: "Leg press horizontal",
-    img: "img/leg_unilateral.webp",
+    img: "img/leg_horizontal.jpg",
     musculos: "Quadríceps, glúteos e posteriores",
     passos: [
       "Sente-se com as costas apoiadas e os pés na plataforma na largura dos ombros.",
@@ -291,7 +291,7 @@ const EXERCICIOS = {
   },
   afundo: {
     nome: "Afundo reverso com halteres",
-    img: "img/afundo.svg",
+    img: "img/afundo.jpg",
     musculos: "Glúteos e quadríceps",
     passos: [
       "Em pé, segure um halter em cada mão ao lado do corpo.",
@@ -313,7 +313,7 @@ const EXERCICIOS = {
   },
   remada_halter: {
     nome: "Remada unilateral com halter",
-    img: "img/remada_halter.svg",
+    img: "img/remada_halter.jpg",
     musculos: "Dorsais, meio das costas e bíceps",
     passos: [
       "Apoie um joelho e a mão do mesmo lado no banco, com as costas retas.",
@@ -368,7 +368,7 @@ const EXERCICIOS = {
   },
   abdominal: {
     nome: "Abdominal",
-    img: "img/abdominal.svg",
+    img: "img/abdominal.jpg",
     musculos: "Abdômen (reto abdominal)",
     passos: [
       "Deite de costas com os joelhos flexionados e os pés apoiados no chão.",
@@ -379,7 +379,7 @@ const EXERCICIOS = {
   },
   supino_halteres: {
     nome: "Supino reto com halteres",
-    img: "img/supino_halteres.svg",
+    img: "img/supino_halteres.jpg",
     musculos: "Peitoral, tríceps e parte da frente dos ombros",
     passos: [
       "Deite no banco com os pés apoiados no chão e um halter em cada mão na altura do peito.",
@@ -390,7 +390,7 @@ const EXERCICIOS = {
   },
   desenvolvimento_halteres: {
     nome: "Desenvolvimento com halteres",
-    img: "img/desenvolvimento_halteres.svg",
+    img: "img/desenvolvimento_halteres.jpg",
     musculos: "Ombros e tríceps",
     passos: [
       "Sente-se no banco com encosto, halteres na altura dos ombros e palmas para a frente.",
@@ -401,7 +401,7 @@ const EXERCICIOS = {
   },
   elevacao_lateral: {
     nome: "Elevação lateral com halteres",
-    img: "img/elevacao_lateral.svg",
+    img: "img/elevacao_lateral.jpg",
     musculos: "Ombros (deltoide lateral)",
     passos: [
       "Em pé, segure os halteres ao lado do corpo com os cotovelos levemente flexionados.",
@@ -412,7 +412,7 @@ const EXERCICIOS = {
   },
   face_pull: {
     nome: "Face pull na polia",
-    img: "img/face_pull.svg",
+    img: "img/face_pull.jpg",
     musculos: "Parte posterior dos ombros e meio das costas",
     passos: [
       "Ajuste a polia na altura do rosto e segure a corda com as palmas para baixo.",
@@ -423,7 +423,7 @@ const EXERCICIOS = {
   },
   step_up: {
     nome: "Step-up com halteres",
-    img: "img/step_up.svg",
+    img: "img/step_up.jpg",
     musculos: "Glúteos e quadríceps",
     passos: [
       "Fique de frente para o banco ou caixote, com um halter em cada mão.",
@@ -434,7 +434,7 @@ const EXERCICIOS = {
   },
   coice_polia: {
     nome: "Coice de glúteo na polia",
-    img: "img/coice_polia.svg",
+    img: "img/coice_polia.jpg",
     musculos: "Glúteo máximo",
     passos: [
       "Prenda a tornozeleira na polia baixa e segure na estação, com o tronco levemente inclinado.",
@@ -573,7 +573,7 @@ const DIAS_T2 = [
     cardio: "Caminhada leve, se estiver recuperada · 10–15 min",
     exercicios: [
       { id: "hip_thrust", nome: "Elevação pélvica com barra", series: 3, reps: "10–12", dica: "segure 2 segundos no topo." },
-      { id: "step_up", series: 2, reps: "10 por perna" },
+      { id: "leg_unilateral", series: 2, reps: "10 por perna" },
       { id: "coice_polia", series: 2, reps: "12 por perna" },
       { id: "abdutora", nome: "Cadeira abdutora", series: 3, reps: "12–15", dica: "faça o movimento controlado." },
       { id: "goblet", nome: "Agachamento goblet", series: 2, reps: "12" }

@@ -110,6 +110,11 @@ svg { width: 22px; height: 22px; flex: none; }
   flex: 1; min-width: 0; width: 100%; height: auto; aspect-ratio: 1; max-height: 280px;
   object-fit: contain; border-radius: 14px; background: var(--fundo);
 }
+/* Imagens em paisagem (duas fases do movimento): imagem inteira em cima, músculos embaixo */
+.hero.largo { flex-direction: column; }
+.hero.largo .hero-img { aspect-ratio: 3 / 2; max-height: none; }
+.hero.largo .musculos { width: auto; align-self: stretch; }
+.hero.largo .musculos b { display: inline; margin-right: 6px; }
 .hero .sem-img svg { width: 64px; height: 64px; }
 .musculos {
   width: 120px; flex: none; align-self: flex-end;
